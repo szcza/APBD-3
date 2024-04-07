@@ -88,7 +88,7 @@ public class UserServiceTests
 
         Assert.Throws<ArgumentException>(() =>
         {
-            _ = service.AddUser("John", "Unknown", "kowalski@wp.pl", new DateTime(1980, 1, 1), 100);
+            service.AddUser("John", "Doe", "johndoe@gmail.com", new DateTime(1980, 1, 1), 100);
         });
     }
     [Fact]
@@ -99,7 +99,7 @@ public class UserServiceTests
 
         Assert.Throws<ArgumentException>(() =>
         {
-            _ = service.AddUser("John", "Andrzejewicz", "andrzejewicz@wp.pl", new DateTime(1980, 1, 1), 6);
+            service.AddUser("John", "Andrzejewicz", "andrzejewicz@wp.pl", new DateTime(1980, 1, 1), 6);
         });
     }
 }
