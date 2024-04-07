@@ -33,7 +33,6 @@ public class UserCreditLimits
 
     public bool isRich()
     {
-        if (User.HasCreditLimit && User.CreditLimit < 500) return false;
-        return true;
+        return !User.HasCreditLimit || User.CreditLimit >= 500;
     }
 }
